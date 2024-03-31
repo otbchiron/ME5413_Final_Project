@@ -11,6 +11,9 @@
     <rosparam file="$(find jackal_navigation)/params/base_local_planner_params.yaml" command="load" />
     <rosparam file="$(find jackal_navigation)/params/move_base_params.yaml" command="load" />
     
+    <rosparam file="$(find jackal_navigation)/params/prohibition_areas.yaml" command="load" ns="global_costmap/costmap_prohibition_layer" />
+    <rosparam file="$(find jackal_navigation)/params/prohibition_areas.yaml" command="load" ns="local_costmap/costmap_prohibition_layer" />
+    
     <param name="base_global_planner" type="string" value="navfn/NavfnROS" />
     <param name="base_local_planner" value="base_local_planner/TrajectoryPlannerROS"/>
     
