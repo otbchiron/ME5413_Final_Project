@@ -24,7 +24,7 @@
       <robotNamespace>/</robotNamespace>
       <updateRate>50.0</updateRate>
       <bodyName>imu_link</bodyName>
-      <topicName>imu/data</topicName>
+      <topicName>imu/data/raw</topicName>
       <accelDrift>0.005 0.005 0.005</accelDrift>
       <accelGaussianNoise>0.005 0.005 0.005</accelGaussianNoise>
       <rateDrift>0.005 0.005 0.005 </rateDrift>
@@ -40,7 +40,7 @@
       <robotNamespace>/</robotNamespace>
       <bodyName>navsat_link</bodyName>
       <frameId>base_link</frameId>
-      <topicName>/navsat/fix</topicName>
+      <topicName>/navsat/fix/raw</topicName>
       <velocityTopicName>/navsat/vel</velocityTopicName>
       <referenceLatitude>$(optenv GAZEBO_WORLD_LAT 49.9)</referenceLatitude>
       <referenceLongitude>$(optenv GAZEBO_WORLD_LON 8.9)</referenceLongitude>

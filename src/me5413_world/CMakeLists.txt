@@ -45,3 +45,7 @@ add_dependencies(goal_publisher_node ${catkin_EXPORTED_TARGETS} ${${PROJECT_NAME
 
 add_library(object_spawner_gz_plugin SHARED src/object_spawner_gz_plugin.cpp)
 target_link_libraries(object_spawner_gz_plugin ${catkin_LIBRARIES} ${GAZEBO_LIBRARIES})
+
+catkin_install_python(PROGRAMS scripts/noise_silencer.py
+  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+)
