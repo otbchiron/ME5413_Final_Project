@@ -11,9 +11,11 @@ class NoiseSilencer:
 
         self.cmd_vel_subscriber = rospy.Subscriber("/cmd_vel", Twist, self.cmd_vel_callback)
         
+        # Original topics from gazebo
         self.imu_subscriber = rospy.Subscriber("/imu/data/raw", Imu, self.imu_callback)
         self.gps_subscriber = rospy.Subscriber("/navsat/fix/raw", NavSatFix, self.gps_callback)
 
+        # Silenced topics
         self.imu_publisher = rospy.Publisher("/imu/data", Imu, queue_size=10)
         self.gps_publisher = rospy.Publisher("/navsat/fix", NavSatFix, queue_size=10)
 
